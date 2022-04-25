@@ -1,0 +1,19 @@
+pt-BR:
+  language: "Português(BR)"
+  hello: "Olá Mundo"
+  links:
+    show: "Exibir"
+    edit: "Editar"
+    delete: "Deletar"
+    new: "Nova"
+    back: "Voltar"
+    home: "Página Principal"
+  messages:
+    confirm_delete: "Você tem certeza?"
+    welcome: "Seja Bem-Vindo"
+    crypto: "uma app simples para cadastrar e acompanhar criptomoedas"
+    options: "Para começar, selecione uma das opções abaixo"
+  editing: "Editando"
+  showing: "Exibindo"
+  form:
+    option_select: "-Selecione o tipo de mineração-"

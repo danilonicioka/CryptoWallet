@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CryptoWallet</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'jquery', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'notify', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag params[:controller], 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <%= link_to t('links.home'), root_path(), class:"nav-link" %>
+              </li>
+          </ul>
+      </div>
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <%= link_to "Português(BR)", request.params.merge(locale: "pt-BR"), class:"nav-link" %>
+              </li>
+              <li class="nav-item">
+                  <%= link_to "English", request.params.merge(locale: "en"), class:"nav-link" %>
+              </li>
+          </ul>
+      </div>
+    </nav>
+      <div class="container-fluid mx-auto">
+        <%= yield %>
+      </div>
+  </body>
+</html>

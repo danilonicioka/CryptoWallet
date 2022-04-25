@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= "#{t('links.show')} #{Coin.model_name.human}" %></h1>
+
+<form>
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil, @coin.description, class:"form-control", disabled: true %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:acronym) %>
+    <%= text_field_tag nil, @coin.acronym, class:"form-control", disabled: true %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:url_image) %>
+    <%= text_field_tag nil, @coin.url_image, class:"form-control", disabled: true %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:mining_type_id) %>
+    <%= text_field_tag nil, @coin.mining_type.description, class:"form-control", disabled: true %>
+  <br>
+</form>
+
+<%= link_to t('links.edit'), edit_coin_path(@coin), class:"btn btn-warning" %> |
+<%= link_to t('links.back'), coins_path, class:"btn btn-secondary" %>
